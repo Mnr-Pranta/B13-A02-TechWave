@@ -1,0 +1,105 @@
+/* shared */
+.flex-center-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    padding: 8px 15px;
+    background-color: #1d0123;
+}
+
+.navlinks {
+    list-style: none;
+    gap: 20px;
+    color: white;
+}
+
+.logo-white {
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+}
+
+.logo-gradient {
+    font-weight: bold;
+    font-size: 2rem;
+    background: linear-gradient(90deg, #700685, #b814d8);
+    background-clip: text;
+    color: transparent;
+}
+
+.subscribe-btn{
+    background: linear-gradient(90deg, #b92dd5, #3c0347);
+    padding: 8px 15px;
+    font-weight: bold;
+    color: white;
+    border-radius: 15px;
+    border:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    font-size: large;
+}
+
+
+/* Hamburger menu icon */
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none; /* Hidden on desktop */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* 3. Mobile Media Query (under 768px) */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        justify-content: start; 
+    }
+
+    .navlinks {
+        position: fixed;
+        top: 0;
+        right: -100%; 
+        width: 70%;
+        height: 100vh;
+        background-color: #2e0236; /* Slightly lighter purple for depth */
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #menu-toggle:checked ~ .navlinks {
+        right: 0;
+    }
+
+    
+    #menu-toggle:checked ~ .hamburger span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    #menu-toggle:checked ~ .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+    #menu-toggle:checked ~ .hamburger span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .subscribe-btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
