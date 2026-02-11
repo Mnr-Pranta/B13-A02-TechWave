@@ -1,3 +1,8 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
 /* shared */
 .flex-center-between {
     display: flex;
@@ -6,7 +11,7 @@
 }
 
 .navbar {
-    padding: 8px 15px;
+    padding: 10px 15px;
     background-color: #1d0123;
 }
 
@@ -65,7 +70,87 @@
     border-radius: 2px;
 }
 
-/* 3. Mobile Media Query (under 768px) */
+
+/* Banner styles */
+.banner {
+    background-image: url('./assets/hero-bg.png'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.banner-content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.podcast-circle {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+}
+
+.podcast-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-content h1 {
+    font-size: 3.5rem;
+    margin: 0;
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+}
+
+.banner-btns {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #b92dd5, #3c0347);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(184, 20, 216, 0.3);
+}
+
+/* Mobile Media Query (under 768px) */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -101,5 +186,19 @@
     .subscribe-btn {
         padding: 6px 12px;
         font-size: 14px;
+    }
+
+    .banner-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .podcast-circle {
+        width: 180px;
+        height: 180px;
+    }
+
+    .banner-btns {
+        flex-direction: column;
+        width: 100%;
     }
 }
