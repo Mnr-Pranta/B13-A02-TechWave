@@ -78,7 +78,6 @@
     background-size: cover;
     background-position: center;
     color: white;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -143,8 +142,8 @@
 
 .btn-secondary {
     background-color: rgba(255, 255, 255, 0.1);
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #00ff88;
+    border: 1px solid #00ff88;
 }
 
 .btn-primary:hover,
@@ -155,19 +154,22 @@
 
 
 
-/*styles for the about section */
+/*about section styles*/
 .about-section {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 60px 24px;
     font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-    background-color: #ffffff;
+    background-color: #1A0B2E;
 }
 
 /* Heading container */
 .about-heading {
     text-align: center;
     margin-bottom: 48px;
+}
+.heading-title, .heading-description{
+    color: white !important;
 }
 
 .about-heading h2 {
@@ -196,7 +198,7 @@
 /* Individual stat card */
 .stat-item {
     flex: 1 1 200px;
-    background: #f9fafb;
+    background: #1A0B2E;
     border-radius: 16px;
     padding: 32px 16px;
     text-align: center;
@@ -212,7 +214,7 @@
 .stat-number {
     font-size: 3.5rem;
     font-weight: 800;
-    color: #0f172a;
+    color: #00ff88;
     line-height: 1;
     margin-bottom: 8px;
 }
@@ -245,7 +247,6 @@
         width: 70%;
         height: 100vh;
         background-color: #2e0236;
-        /* Slightly lighter purple for depth */
         flex-direction: column;
         justify-content: center;
     }
@@ -304,6 +305,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 16px;
+        width: 100%;
     }
 
     .stat-item {
