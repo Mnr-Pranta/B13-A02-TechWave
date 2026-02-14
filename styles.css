@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
@@ -35,13 +35,13 @@
     color: transparent;
 }
 
-.subscribe-btn{
+.subscribe-btn {
     background: linear-gradient(90deg, #b92dd5, #3c0347);
     padding: 8px 15px;
     font-weight: bold;
     color: white;
     border-radius: 15px;
-    border:none;
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,7 +56,8 @@
 }
 
 .hamburger {
-    display: none; /* Hidden on desktop */
+    display: none;
+    /* Hidden on desktop */
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
@@ -73,16 +74,16 @@
 
 /* Banner styles */
 .banner {
-    background-image: url('./assets/hero-bg.png'); 
+    background-image: url('./assets/hero-bg.png');
     background-size: cover;
     background-position: center;
     color: white;
-    height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 20px;
+    padding: 80px 100px;
 }
 
 .banner-content {
@@ -125,7 +126,8 @@
     margin-top: 10px;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary,
+.btn-secondary {
     padding: 12px 30px;
     border-radius: 30px;
     font-weight: bold;
@@ -145,47 +147,131 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.btn-primary:hover, .btn-secondary:hover {
+.btn-primary:hover,
+.btn-secondary:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(184, 20, 216, 0.3);
 }
 
-/* Mobile Media Query (under 768px) */
+
+
+/*styles for the about section */
+.about-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 24px;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    background-color: #ffffff;
+}
+
+/* Heading container */
+.about-heading {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.about-heading h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 16px 0;
+    line-height: 1.2;
+}
+
+.about-heading p {
+    font-size: 1.125rem;
+    color: #4b5563;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.stats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+/* Individual stat card */
+.stat-item {
+    flex: 1 1 200px;
+    background: #f9fafb;
+    border-radius: 16px;
+    padding: 32px 16px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.stat-suffix {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #3b82f6;
+    margin-left: 2px;
+}
+
+.stat-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #64748b;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
-        justify-content: start; 
+        justify-content: start;
     }
 
     .navlinks {
         position: fixed;
         top: 0;
-        right: -100%; 
+        right: -100%;
         width: 70%;
         height: 100vh;
-        background-color: #2e0236; /* Slightly lighter purple for depth */
+        background-color: #2e0236;
+        /* Slightly lighter purple for depth */
         flex-direction: column;
         justify-content: center;
     }
 
-    #menu-toggle:checked ~ .navlinks {
+
+    #menu-toggle:checked~.navlinks {
         right: 0;
     }
 
-    
-    #menu-toggle:checked ~ .hamburger span:nth-child(1) {
+
+    #menu-toggle:checked~.hamburger span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
-    #menu-toggle:checked ~ .hamburger span:nth-child(2) {
+
+    #menu-toggle:checked~.hamburger span:nth-child(2) {
         opacity: 0;
     }
-    #menu-toggle:checked ~ .hamburger span:nth-child(3) {
+
+    #menu-toggle:checked~.hamburger span:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
 
     .subscribe-btn {
         padding: 6px 12px;
         font-size: 14px;
+        display: none;
     }
 
     .banner-content h1 {
@@ -200,5 +286,39 @@
     .banner-btns {
         flex-direction: column;
         width: 100%;
+    }
+
+    .about-section {
+        padding: 40px 20px;
+    }
+
+    .about-heading h2 {
+        font-size: 2rem;
+    }
+
+    .about-heading p {
+        font-size: 1rem;
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .stat-item {
+        padding: 24px 12px;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .stat-suffix {
+        font-size: 1.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.875rem;
     }
 }
